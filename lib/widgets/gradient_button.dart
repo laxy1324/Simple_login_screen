@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../pallete.dart';
 
 class GradientButton extends StatelessWidget {
-  //write a final that can be used for the onPressed function
   final VoidCallback onPressed;
   final String label;
 
@@ -17,8 +16,6 @@ class GradientButton extends StatelessWidget {
             Border.all(color: Pallete.whiteColor.withOpacity(0.5), width: 1.4),
         gradient: LinearGradient(
           colors: [
-            // Pallete.backgroundColor.withOpacity(0.5),
-            // const Color(0xff121212).withOpacity(0.5),
             Pallete.gradient1.withOpacity(0.5),
             Pallete.gradient2.withOpacity(0.5),
             Pallete.gradient3.withOpacity(0.5)

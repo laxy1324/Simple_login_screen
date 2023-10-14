@@ -9,9 +9,27 @@ class WindowButtons extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        MinimizeWindowButton(),
-        MaximizeWindowButton(),
-        CloseWindowButton(),
+        MinimizeWindowButton(
+          colors: WindowButtonColors(
+            iconNormal: Colors.white,
+            mouseOver: Colors.black.withOpacity(0.2),
+            mouseDown: Colors.white.withOpacity(0.1),
+          ),
+        ),
+        MaximizeWindowButton(
+          colors: WindowButtonColors(
+            iconNormal: Colors.white,
+            mouseOver: Colors.black.withOpacity(0.2),
+            mouseDown: Colors.white.withOpacity(0.1),
+          ),
+        ),
+        CloseWindowButton(
+          colors: WindowButtonColors(
+            iconNormal: Colors.white,
+            mouseOver: Colors.black.withOpacity(0.2),
+            mouseDown: Colors.white.withOpacity(0.1),
+          ),
+        ),
       ],
     );
   }

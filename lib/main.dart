@@ -2,7 +2,6 @@ import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
 import 'pages/login_screen.dart';
 import 'pallete.dart';
-// import 'package:window_manager/window_manager.dart';
 
 void main() async {
   runApp(const MyApp());

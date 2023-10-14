@@ -39,7 +39,6 @@ class TestApp3 extends StatelessWidget {
                       ],
                     ),
                   ),
-                  // TitleBarHandler(),
                   Stack(
                     alignment: AlignmentDirectional.center,
                     children: <Widget>[
@@ -126,10 +125,7 @@ class TestApp3 extends StatelessWidget {
                           const SizedBox(height: 30),
                           GradientButton(
                             label: 'Sign in',
-                            onPressed: () {
-                              // print(
-                              //     'Width: ${MediaQuery.of(context).size.width}, Height: ${MediaQuery.of(context).size.height}');
-                            },
+                            onPressed: () {},
                           ),
                         ],
                       )
