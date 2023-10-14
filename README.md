@@ -1,16 +1,13 @@
-# login_test
+# Simple Login Screen
+Personal project to learn flutter and dart. This is just the UI for a simple login screen which can be deployed on windows and web. 
 
-A new Flutter project.
+# Future additions
+## UI 
+###### Frontend
+- [ ] Add a register button or hyperlink
+- [ ] Add a forgot password button or hyperlink
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+###### Backend
+- [ ] Add a database to store user information
+- [ ] Add a backend to handle user information and authentication
+- [ ] Add a dummy page to redirect to after login
