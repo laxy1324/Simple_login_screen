@@ -40,6 +40,10 @@ dependencies:
   window_manager: ^0.3.7
   bitsdojo_window: ^0.1.5
   google_fonts: ^6.1.0
+  http: ^1.1.0
+  universal_io: ^2.2.2
+  # firebase_ui_auth: ^1.9.0
+  
 
 dev_dependencies:
   flutter_test:

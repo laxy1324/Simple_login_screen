@@ -1,7 +1,9 @@
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 import 'package:flutter/material.dart';
+// import 'package:login_test/firebase_options.dart';
 import 'pages/login_screen.dart';
 import 'pallete.dart';
+// import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
   runApp(const MyApp());

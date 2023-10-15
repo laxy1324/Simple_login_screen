@@ -1,11 +1,14 @@
+import 'package:universal_io/io.dart';
+
 import "package:bitsdojo_window/bitsdojo_window.dart";
+import "package:flutter/cupertino.dart";
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
-import "package:login_test/widgets/gradient_button.dart";
-import "package:login_test/widgets/social_button.dart";
-import "package:login_test/widgets/text_box.dart";
-import "package:login_test/widgets/window_buttons.dart";
+import "../widgets/gradient_button.dart";
+import "../widgets/social_button.dart";
+import "../widgets/text_box.dart";
+import "../widgets/window_buttons.dart";
 
 class TestApp3 extends StatelessWidget {
   const TestApp3({super.key});
@@ -47,10 +50,12 @@ class TestApp3 extends StatelessWidget {
                           alignment: Alignment.topCenter,
                           heightFactor: 1,
                           child: Image.asset(
-                            'assets/images/architecture.jpg',
+                            'assets/images/stone-tower.jpg',
                             fit: BoxFit.cover,
                             isAntiAlias: true,
-                            height: MediaQuery.of(context).size.height - 35,
+                            height: (Platform.isWindows)
+                                ? MediaQuery.of(context).size.height - 35
+                                : MediaQuery.of(context).size.height,
                             width: MediaQuery.of(context).size.width,
                           ),
                         ),
@@ -59,15 +64,16 @@ class TestApp3 extends StatelessWidget {
                         // top: 100,
                         child: Container(
                           height: MediaQuery.of(context).size.height * 0.7,
-                          width: MediaQuery.of(context).size.width * 0.7,
+                          width: MediaQuery.of(context).size.width * 0.8,
                           color: Colors.transparent,
                           child: SizedBox(
                             child: DecoratedBox(
                               decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(0.0),
+                                color: Colors.white.withOpacity(0),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: Colors.grey.withOpacity(0.2),
+                                    blurStyle: BlurStyle.normal,
+                                    color: Colors.blueGrey.withOpacity(0.1),
                                     spreadRadius: 500,
                                     blurRadius: 1022,
                                     offset: const Offset(
@@ -93,6 +99,35 @@ class TestApp3 extends StatelessWidget {
                           const SizedBox(
                             height: 20,
                           ),
+                          LoginField(
+                            prefixIcon: const Icon(CupertinoIcons.mail),
+                            obscureText: false,
+                            filled: true,
+                            fillColor: Colors.blueGrey.withOpacity(0.2),
+                            cursorColor: Colors.white,
+                            floatingLabelText: 'Email',
+                            // floatinglabelText: 'sdds',
+                          ),
+                          const SizedBox(height: 15),
+                          LoginField(
+                              prefixIcon: const Icon(CupertinoIcons.lock),
+                              obscureText: true,
+                              filled: true,
+                              fillColor: Colors.blueGrey.withOpacity(0.2),
+                              cursorColor: Colors.white,
+                              floatingLabelText: 'Password'),
+                          const SizedBox(height: 10),
+                          Text(
+                            'OR',
+                            style: GoogleFonts.robotoSlab(
+                              textStyle: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15,
+                                color: Colors.white.withOpacity(1),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 10),
                           SocialButton(
                             onPressed: () {},
                             horizontalPadding: 90,
@@ -105,28 +140,12 @@ class TestApp3 extends StatelessWidget {
                             iconPath: 'assets/svgs/g_logo.svg',
                             label: 'Continue with Google',
                           ),
-                          const SizedBox(height: 10),
-                          Text(
-                            'OR',
-                            style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white.withOpacity(0.7)),
-                          ),
-                          const SizedBox(height: 10),
-                          const LoginField(
-                            hintText: 'Email',
-                          ),
-                          const SizedBox(height: 15),
-                          const LoginField(
-                            hintText: 'Password',
-                            obscureText: true,
-                          ),
                           const SizedBox(height: 30),
                           GradientButton(
                             label: 'Sign in',
-                            onPressed: () {},
+                            onPressed: () async {},
                           ),
+                          // HandleAuth(),
                         ],
                       )
                     ],
